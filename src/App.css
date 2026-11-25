@@ -1,3 +1,7 @@
+.background{
+
+  background-color: #00512C ;
+}
 .counter {
   font-size: 16px;
   padding: 5px 10px;
@@ -16,10 +20,30 @@
     outline-offset: 2px;
   }
 }
-.cardInitial {
+.cardlayout {
   height: 300px;
   font-size: 16px;
   padding: 5px 10px;
+  border-radius: 5px;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+  margin-bottom: 24px;
+
+  &:hover {
+    border-color: var(--accent-border);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+}
+
+.cardInitial {
+  height: 198px;
+  font-size: 16px;
+  padding: 0px px;
   border-radius: 5px;
   color: var(--accent);
   background: var(--accent-bg);
@@ -204,9 +228,9 @@
 .flip-card{
 	background-color: transparent;
 	width: 300px;
-	height: 200px;
+	height: 250px;
 	border: 1x solid #f1f1f1;
-	perspective: 1000px;
+	perspective: 300px;
 }
 
 .flip-card-inner{
@@ -225,19 +249,24 @@
 
 .flip-card-front, .flip-card-back{
 	position: absolute;
-	width: 100%;
-	height: 100px;
+	width: 150%;
+	height: 200px;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  
 }
 
 .flip-card-front{
-	background-color: #bbb;
+	background-color:#00512C ;
 	color: black;
+  width: 150px;
+	height: 200px;
 }
 
 .flip-card-back{
 	background-color:#00512C ;
 	color: white ;
-	transform: rotateY(180deg);
+	transform: rotateY(360deg);
+  width: 150px;
+	height: 200px;
 }
